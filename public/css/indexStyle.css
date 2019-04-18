@@ -1,0 +1,23 @@
+body{
+    background: gray;
+}
+
+h1{
+    color: red;
+    text-shadow: 1px 1px 1px #000, 
+    3px 3px 5px blue; 
+    font-size: 5em;
+    cursor: pointer;
+}
+
+h1:hover{
+    color: red;
+    text-shadow: 1px 1px 1px #000, 
+    3px 3px 5px blue; 
+    font-size: 5.2em;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none !important;
+}
