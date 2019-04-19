@@ -1,5 +1,5 @@
-body {
-    background: white
+textarea{
+    resize: none;
 }
 
 h1{
@@ -9,6 +9,7 @@ h1{
     text-shadow: 1px 1px 1px #000, 
     3px 3px 5px black;
     font-size: 4em;
+    
 }
 
 h2{
@@ -16,9 +17,8 @@ h2{
     justify-content: center;
 }
 
-#menuBtn{
+form{
     display: flex;
     justify-content: center;
-    margin: 1%;
 
 }

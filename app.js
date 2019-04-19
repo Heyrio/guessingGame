@@ -39,7 +39,6 @@ app.get('/home', (req, res)=>{
     res.render('home');
 })
 
-
 app.get('/winner',(req, res)=>{
 
     res.render('winner');
@@ -66,7 +65,7 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
     app.post('/winner',(req, res)=>{
         var userName = req.body.name
         db.collection('User').insertOne({ name: userName });
-        res.render('winner')
+        res.redirect('/')
     })
     // querys the database of all game winners
     app.get('/score',(req, res)=>{
@@ -78,13 +77,15 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
             for(var i = 0; i <data.length; i++){
                 winners.push(data[i].name)
             }
+            var final = winners.join('<br/>')
             res.render('score', {
-                winners: winners 
+                winners: final 
             });     
         })     
     });
     console.log('Connected to database..');
 })
+
 
 app.listen(3000,()=>{
     console.log('Server is running...');
