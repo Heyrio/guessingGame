@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const app = express();
 
 //Database modules
@@ -13,8 +14,18 @@ const MongoClient = mongodb.MongoClient;
 const collection = 'Winners'
 
 // mongoAtlas key
-const URL = 'mongodb+srv://heyrio:password@cluster0-7cpbz.mongodb.net/test?retryWrites=true';
+const URL = 'mongodb+srv://heyrio:Qbdy9260@cluster0-7cpbz.mongodb.net/test?retryWrites=true';
 
+// mongooose for validation
+mongoose.connect('mongodb+srv://heyrio:Qbdy9260@cluster0-7cpbz.mongodb.net/test?retryWrites=true', {useNewUrlParser: true},(error, client)=>{
+
+    if(error){
+        console.log('Mongoose did not connect...')
+    }
+
+    console.log('Mongoose.. connected');
+
+});
 
 //middleware to parse the data
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -64,7 +75,10 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
     // Lets you store youre name in the winner page
     app.post('/winner',(req, res)=>{
         var userName = req.body.name
-        db.collection('User').insertOne({ name: userName });
+        db.collection('User').insertOne({ 
+            name: userName
+        
+        });
         res.redirect('/')
     })
     // querys the database of all game winners
