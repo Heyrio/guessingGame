@@ -68,8 +68,6 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
         db.collection('User').insertOne({ name: userName });
         res.render('winner')
     })
-
-
     // querys the database of all game winners
     app.get('/score',(req, res)=>{
         db.collection('User').find({}).toArray((error, data)=>{
@@ -81,18 +79,12 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
                 winners.push(data[i].name)
             }
             res.render('score', {
-                winners: winners + '\n'
-            });
-
-            
+                winners: winners 
+            });     
         })     
-    
     });
-    
-   
     console.log('Connected to database..');
 })
-
 
 app.listen(3000,()=>{
     console.log('Server is running...');

@@ -1,21 +1,27 @@
 body{
-    background: gray;
+    background-image: url('/images/bg.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
 }
 
 h1{
-    color: red;
+    color:white;
     text-shadow: 1px 1px 1px #000, 
-    3px 3px 5px blue; 
+    3px 3px 5px black; 
     font-size: 5em;
     cursor: pointer;
+    font-family: 'Anton', sans-serif;
 }
 
 h1:hover{
-    color: red;
+    color:#5ea585;
     text-shadow: 1px 1px 1px #000, 
-    3px 3px 5px blue; 
+    3px 3px 5px black; 
     font-size: 5.2em;
     cursor: pointer;
+    font-family: 'Anton', sans-serif;
 }
 
 a{

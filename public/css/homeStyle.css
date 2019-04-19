@@ -2,7 +2,7 @@
 .card {
     height: 150px;
     margin-top: 2em;
-    background:peachpuff;
+    background:#5ea585;
     cursor: pointer;
     -moz-box-shadow: 0 0 5px #888;
     -webkit-box-shadow: 0 0 5px#888;
