@@ -29,7 +29,7 @@ a{
     cursor: pointer;
 }
 
-h1{
+#sc{
     color: white;
     text-shadow: 1px 1px 1px #000, 
     3px 3px 5px black;
@@ -40,3 +40,4 @@ h1{
     text-shadow: 1px 1px 1px #000, 
     3px 3px 5px black;
 }
+

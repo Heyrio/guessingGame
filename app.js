@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
+
+
+var port = process.env.PORT || 3000;
 //Database modules
 
 const mongodb = require('mongodb');
@@ -17,7 +20,7 @@ const collection = 'Winners'
 const URL = 'mongodb+srv://heyrio:@cluster0-7cpbz.mongodb.net/test?retryWrites=true';
 
 // mongooose for validation
-mongoose.connect('mongodb+srv://heyrio:passwordd@cluster0-7cpbz.mongodb.net/test?retryWrites=true', {useNewUrlParser: true},(error, client)=>{
+mongoose.connect('mongodb+srv://heyrio:@cluster0-7cpbz.mongodb.net/test?retryWrites=true', {useNewUrlParser: true},(error, client)=>{
 
     if(error){
        return console.log('Mongoose did not connect...')
@@ -101,6 +104,6 @@ MongoClient.connect(URL,{useNewUrlParser: true},(error, client)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is running...');
 })

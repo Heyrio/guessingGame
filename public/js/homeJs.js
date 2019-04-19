@@ -52,7 +52,6 @@ function randomBomb(){
                     'cd7','cd8','cd9','cd10','cd11','cd12',
                     'cd13','cd14','cd15','cd16','cd17','cd18']
         var bomb = document.getElementById(cardArr[dice]);
-        console.log(bomb);
         bomb.addEventListener('click', ()=>{
             bomb.classList.remove('card');
             bomb.classList.add('bomb');
@@ -67,8 +66,6 @@ function die(bomb){
     for(var i =0; i< card.length; i++){
         card[i].classList.remove("card");
     }
-    alert('You Lose');
-    
 }
 
 
