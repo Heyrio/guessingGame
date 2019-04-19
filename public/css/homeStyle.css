@@ -1,3 +1,12 @@
+body{
+   
+    background: url('/images/pixelTrain.gif') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 .card {
     height: 150px;
@@ -18,4 +27,16 @@
 
 a{
     cursor: pointer;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 1px 1px #000, 
+    3px 3px 5px black;
+}
+
+#ptn {
+    color: green;
+    text-shadow: 1px 1px 1px #000, 
+    3px 3px 5px black;
 }

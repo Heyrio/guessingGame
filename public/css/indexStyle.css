@@ -1,9 +1,10 @@
 body{
-    background-image: url('/images/bg.gif');
-    background-position: center;
-    background-repeat: no-repeat;
+   
+    background: url('/images/bg.gif') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position-y: 30%;
 }
 
 h1{
