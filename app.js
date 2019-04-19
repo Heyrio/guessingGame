@@ -23,6 +23,17 @@ app.get('/home', (req, res)=>{
     res.render('home');
 })
 
+app.get('/score',(req, res)=>{
+
+    res.render('score');
+
+});
+
+app.get('/winner',(req, res)=>{
+
+    res.render('winner');
+
+});
 
 
 app.listen(3000,()=>{

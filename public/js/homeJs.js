@@ -1,6 +1,7 @@
 const card = document.querySelectorAll('.card');
 const reset = document.querySelector('button');
 var ptn = document.getElementById("ptn")
+
 // A player clicks and a card fades away also the main game logic
 
 function playerClick(){
@@ -23,7 +24,7 @@ for(var i =0; i< card.length; i++){
 
 function resetBtn(){
     reset.addEventListener('click', ()=>{
-        location = location
+        location.reload(true)
     })
 }
 
@@ -40,7 +41,7 @@ function win(){
             card[i].classList.remove("card");
         }
         setTimeout(()=>{
-            alert('YOU WIN!');
+           window.location.href = 'http://localhost:3000/winner'
         },250);
 }
 
@@ -57,7 +58,7 @@ function randomBomb(){
             bomb.classList.add('bomb');
             setTimeout(()=>{
                 die(bomb);
-            },250)
+            },350)
         })
 }
 
@@ -67,6 +68,9 @@ function die(bomb){
         card[i].classList.remove("card");
     }
     alert('You Lose');
+    
 }
 
+
+// starts the entire game logic
 playerClick();
