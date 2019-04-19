@@ -2,7 +2,7 @@ const card = document.querySelectorAll('.card');
 const reset = document.querySelector('button');
 var ptn = document.getElementById("ptn")
 
-// A player clicks and a card fades away also the main game logic
+// A player clicks and a card disappears also the main game logic
 
 function playerClick(){
     resetBtn();
@@ -47,12 +47,12 @@ function win(){
 
 // generates a card with a random bomb class
 function randomBomb(){
-    var dice = Math.floor((Math.random() * 18) + 1);
+    var dice = Math.floor((Math.random() * 17) + 1);
     const cardArr = ['cd1','cd2','cd3','cd4','cd5','cd6',
                     'cd7','cd8','cd9','cd10','cd11','cd12',
-                    'cd13','cd14','cd15','cd16']
+                    'cd13','cd14','cd15','cd16','cd17','cd18']
         var bomb = document.getElementById(cardArr[dice]);
-
+        console.log(bomb);
         bomb.addEventListener('click', ()=>{
             bomb.classList.remove('card');
             bomb.classList.add('bomb');
